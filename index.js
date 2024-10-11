@@ -7,15 +7,15 @@ require("dotenv").config();
 
 var express = require("express");
 var app = express();
+// // mongoose (if you need it)
+// var mongoose = require("mongoose");
 // mongoose
-var mongoose = require("mongoose");
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("Connection error:", err));
+//   .connect(process.env.MONGO_URI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => console.log("MongoDB connected"))
+//   .catch((err) => console.error("Connection error:", err));
 
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC
