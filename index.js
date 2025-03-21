@@ -35,23 +35,22 @@ app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
 });
 
-// Timestamp Microservice please copilot dont help me with this one
 
 app.get("/api/:date_query?", (req, res) => {
   let dateString = req.params.date_query;
   let date;
   if (!dateString) {
     date = new Date();
-    // console.log(date); // only for testing
+    
   } else {
     if (/^\d+$/.test(dateString)) {
       date = new Date(parseInt(dateString));
-      // console.log(date);
+      
     } else date = new Date(dateString);
-    // console.log(date); // only for testing
+    
   }
   if (date.toString() === "Invalid Date") {
-    // console.log(date); // only for testing
+    
     res.json({ error: date.toString() });
   } else {
     res.json({
